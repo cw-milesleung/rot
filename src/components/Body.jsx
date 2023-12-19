@@ -5,8 +5,8 @@ const Body = () => {
       <p>
         <textarea type="text" />
       </p>
-      <p>↓</p>
-      <p>↓</p>
+      <p className="arrow">↓</p>
+      <p className="arrow">↓</p>
       <label>Output: </label>
       <p>
         <textarea type="text" readOnly />
