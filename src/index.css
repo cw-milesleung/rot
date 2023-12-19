@@ -36,6 +36,24 @@ h1 {
   line-height: 1.1;
 }
 
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.arrow {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+select {
+  color: aquamarine;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
