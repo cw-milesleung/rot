@@ -25,3 +25,28 @@ export const rotArrayObj = [
   { rot: "ROT24", value: 24 },
   { rot: "ROT25", value: 25 },
 ];
+
+export const rot13 = (str, rot) => {
+  const rotNum = 26 - rot;
+  const originalAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let newOGArray = originalAlphabet.split("");
+  let LettersBeforeIndexArray = [];
+
+  for (let i = 0; i < newOGArray.length; i++) {
+    const lettersBeforeIndex = (i - rotNum + 26) % 26;
+    LettersBeforeIndexArray.push(newOGArray[lettersBeforeIndex]);
+  }
+
+  const rot13Object = {};
+  newOGArray.forEach((key, index) => {
+    rot13Object[key] = LettersBeforeIndexArray[index];
+  });
+
+  const translatedString = str
+    .toUpperCase()
+    .split("")
+    .map((value) => (value ? rot13Object[value] || value : value))
+    .join("");
+
+  return translatedString;
+};
