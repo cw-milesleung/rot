@@ -20,7 +20,7 @@ const Body = () => {
 
   return (
     <div>
-      <label>Input Text: </label>
+      {/* <label>Input Text: </label> */}
       <p>
         <textarea type="text" autoFocus onChange={handleInputText} />
       </p>
@@ -38,7 +38,7 @@ const Body = () => {
         </select>
       </p>
       <p className="arrow">↓</p>
-      <label>Result: </label>
+      {/* <label>Result: </label> */}
       <p>
         <textarea type="text" readOnly value={outputText} />
       </p>
