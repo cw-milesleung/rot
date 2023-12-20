@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { rotArrayObj, rot13 } from "../data.js";
 
 const Body = () => {
@@ -14,21 +14,15 @@ const Body = () => {
     setInputText(e.target.value);
   };
 
-  const output = () => {
+  useEffect(() => {
     setOutputText(rot13(inputText, rot));
-  };
+  }, [inputText, rot]);
 
   return (
     <div>
       <label>Input Text: </label>
       <p>
-        <textarea
-          type="text"
-          onChange={(e) => {
-            handleInputText(e);
-            output();
-          }}
-        />
+        <textarea type="text" autoFocus onChange={handleInputText} />
       </p>
       <p className="arrow">↓</p>
       <p>
