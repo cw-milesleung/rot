@@ -11,10 +11,6 @@
   text-rendering: optimizeLegibility;
 }
 
-img:hover {
-  cursor: pointer;
-}
-
 .theme-btn {
   position: relative;
   left: 8.5rem;
