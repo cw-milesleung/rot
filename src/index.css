@@ -27,7 +27,7 @@ body {
 }
 
 a {
-  color: aquamarine;
+  color: rgb(255, 127, 127);
 }
 
 textarea {
@@ -57,7 +57,7 @@ p {
 }
 
 select {
-  color: aquamarine;
+  color: rgb(255, 127, 127);
 }
 
 @media (prefers-color-scheme: light) {
